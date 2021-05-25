@@ -51,7 +51,7 @@ const database = {
 }
 
 app.get('/', (req, res) => {
-    res.send(database.users);
+    res.send('its is working!');
 })
 
 app.post('/signin', (req, res) => {
@@ -135,7 +135,7 @@ app.listen(3001, () => {
 
 console.log(3001) */
 
-app.listen(3001,()=> {
-console.log('app is running on port 3001');
+app.listen(process.env.PORT || 3001, ()=> {
+console.log(`app is running on port 3001 ${process.env.PORT}`);
 })
 
